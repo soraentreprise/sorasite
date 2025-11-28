@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SORA ENTREPRISE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-left">SORA ENTREPRISE</div>
+    <div class="logo-right">
+        <img src="https://i.imgur.com/ora-logo-blue-violet-v3.png" alt="ORA Logo" class="ora-logo">
+    </div>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#mission">Mission</a>
+        <a href="#produits">Produits</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO 100 % IDENTIQUE À TON IMAGE (bande rose en bas) -->
+<section id="accueil" class="hero">
+    <img src="https://i.imgur.com/hero-final-pink-band-stable.png" alt="SORA Hero" class="hero-img">
+</section>
+
+<!-- CARROUSEL PRODUITS (Videray APX en premier) -->
+<section class="slider">
+    <div class="slides">
+        <img src="https://i.imgur.com/apx-videray-stable.png" alt="Videray APX">
+        <img src="https://i.imgur.com/px1-valise-stable.png" alt="PX1">
+        <img src="https://i.imgur.com/px1-profil-stable.png" alt="PX1 Profil">
+        <img src="https://i.imgur.com/pxt-valise-stable.png" alt="PXT">
+        <img src="https://i.imgur.com/pxt-violet-stable.png" alt="PXT Violet">
+        <img src="https://i.imgur.com/apx-videray-stable.png" alt="Videray APX">
+    </div>
+</section>
+
+<!-- À propos (texte justifié) -->
+<section id="apropos" class="section">
+    <h2>À propos</h2>
+    <div class="text-just">
+        <p>La société SORA ENTREPRISE est une société spécialisée dans la commercialisation des équipements de contrôle de sécurité et d'investigations tels que les scanners portatifs et le Nirlight narcotiques.</p>
+        <p>Notre société est représentée dans les grandes capitales des pays de l'Afrique de l'Ouest et au-delà à travers notre siège social au Mali et nos succursales SORA ENTREPRISE BF au Burkina Faso et SORA ENTREPRISE CI en Côte d'Ivoire pour mieux servir nos clients à proximité.</p>
+        <p>Elle a pour mission en Afrique : la promotion, l'offre et la vente des produits des marques Videray Technologies et Nirlab.</p>
+        <p>Notre vision est d'aider à rendre notre société plus sûre, c'est pourquoi nous apportons des solutions techniques et technologiques à certains problèmes dont l'Afrique est confrontée en termes de sécurité.</p>
+        <p>SORA ENTREPRISE est aussi Partenaire Exclusif en Afrique de VIDERAY TECHNOLOGIES INC, une société américaine spécialisée dans la fabrication d'instruments d'inspection et de détection. Nous fournissons une large gamme de scanners portatifs à rayons X rétrodiffusés et de transmission de marque Videray, numéro un mondial de la sécurité numérique.</p>
+    </div>
+</section>
+
+<!-- Mission (texte justifié) -->
+<section id="mission" class="section">
+    <h2>Mission</h2>
+    <div class="text-just">
+        <p>Notre mission est d'identifier et d'analyser les besoins de nos partenaires et de proposer les meilleures offres techniques ou technologiques pour les couvrir.</p>
+        <p>Pour assurer notre mission nous avons noué des partenariats stratégiques avec des firmes spécialisées afin d'offrir à nos clients les solutions optimales et conformes à l'état de l'art.</p>
+    </div>
+</section>
+
+<!-- Produits -->
+<section id="produits" class="section">
+    <h2>Produits</h2>
+    <div class="products">
+        <div class="card">
+            <img src="https://i.imgur.com/f8Y2pNq-stable.png" alt="PX1">
+            <h3>PX1 Ultra-Portable</h3>
+            <p class="text-just">Scanner à rayons X rétrodiffusés le plus léger du marché (moins de 3 kg), idéal pour les contrôles rapides et discrets.</p>
+        </div>
+        <div class="card">
+            <img src="https://i.imgur.com/QwE7rT5-stable.png" alt="PXT">
+            <h3>PXT Tactical</h3>
+            <p class="text-just">Scanner de transmission haute résolution conçu pour les environnements exigeants et les inspections approfondies.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Galerie -->
+<section id="galerie" class="section">
+    <h2>Galerie</h2>
+    <div class="gallery">
+        <img src="https://i.imgur.com/Zx9vL2m-stable.png" alt="PXT in action" onclick="openLightbox(this)">
+        <img src="https://i.imgur.com/7kPqR5t-stable.png" alt="Démo Abuja" onclick="openLightbox(this)">
+        <img src="https://i.imgur.com/mN4fG8v-stable.png" alt="ASEC 2025" onclick="openLightbox(this)">
+        <img src="https://i.imgur.com/Hj2wQ9x-stable.png" alt="Formation CI" onclick="openLightbox(this)">
+        <img src="https://i.imgur.com/vB8nL5p-stable.png" alt="V-BAT" onclick="openLightbox(this)">
+        <img src="https://i.imgur.com/rT6yM3c-stable.png" alt="Session PX1" onclick="openLightbox(this)">
+        <img src="https://i.imgur.com/pL9kF2d-stable.png" alt="Stand expo" onclick="openLightbox(this)">
+        <img src="https://i.imgur.com/eW4qX7b-stable.png" alt="Équipe terrain" onclick="openLightbox(this)">
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+    <h2>Contactez-nous</h2>
+    <div class="addresses">
+        <div class="addr">
+            <h3>Mali (Siège)</h3>
+            <p class="text-just">Banankabougou, Rue 634<br>Bamako, Mali<br>Tél : +223 71 08 08 05</p>
+        </div>
+        <div class="addr">
+            <h3>Côte d'Ivoire</h3>
+            <p class="text-just">Cocody, Angré 8è tranche, Imm. Les Terrasses<br>Abidjan, Côte d'Ivoire<br>Tél : +225 07 19 96 97 82</p>
+        </div>
+        <div class="addr">
+            <h3>Burkina Faso</h3>
+            <p class="text-just">S/C 10 BP 506 OUAGA Aéroport 10 Secteur 16<br>Ouagadougou, Burkina Faso<br>Tél : +226 66 65 46 76</p>
+        </div>
+    </div>
+</section>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/22371080805" class="wa">+223 71 08 08 05</a>
+<a href="https://wa.me/2250719969782" class="wa ci">+225 07 19 96 97 82</a>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+    <span class="close">&times;</span>
+</div>
+
+<script>
+function openLightbox(img) {
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+</script>
+</body>
+</html>
