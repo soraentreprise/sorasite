@@ -9,7 +9,7 @@ nav a::after { content: ''; position: absolute; bottom: -10px; left: 50%; width:
 nav a:hover::after { width: 100%; }
 .hero img { width: 70%; height: 100vh; object-fit: cover; display: block; }
 .slider { overflow: hidden; padding: 100px 0; background: #000; }
-.slides { display: flex; animation: defile 15s linear infinite; }
+.slides { display: flex; animation: defile 10s linear infinite; }
 .slides img { width: 50%; flex-shrink: 0; }
 @keyframes defile { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 .section { padding: 130px 5%; background: #000; }
