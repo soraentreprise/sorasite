@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SORA ENTREPRISE - Sécurité & Détection</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
+
 <header class="header">
-    <div class="logo-right">
-        <img src="SE LOGO.png" alt="SE LOGO" width="300">
+    <div class="logo">
+        <img src="SE LOGO.png" alt="SORA Logo" class="header-logo">
     </div>
-    <nav>
+    <nav class="nav-links">
         <a href="#accueil">Accueil</a>
         <a href="#apropos">À propos</a>
         <a href="#mission">Mission</a>
@@ -18,29 +22,35 @@
         <a href="#galerie">Galerie</a>
         <a href="#contact">Contact</a>
     </nav>
+    <div class="hamburger">Menu</div>
 </header>
-<!-- HERO 100 % IDENTIQUE À TON IMAGE (bande rose en bas) -->
+
+<!-- HERO local -->
 <section id="accueil" class="hero">
-    <img src="https://i.imgur.com/hero-final-pink-band-stable.png" alt="SORA Hero" class="hero-img">
+    <img src="hero.png" alt="SORA Hero" class="hero-img">
 </section>
 
-<!-- CARROUSEL PRODUITS (APX en premier) -->
-<section class="slider">
-    <div class="slides">
-        <img src="APX.jpg" alt="APX" width="50">
-        <img src="PXT1.jpg" alt="PXT1" width="50">
-        <img src="34t3554.png" alt="34t3554" width="50">
-        <img src="OIP (1) PXT.jpg" alt="OIP (1) PXT" width="50">
-        <img src="PX EXTING SCAN.JPG" alt="PX EXTING SCAN" width="50">
-        <img src="scanner-px1-avec-panneau-mtp.webp" alt="scanner-px1-avec-panneau-mtp.webp" width="50">
-        <img src="PX1 wht bckg.jpg" alt="PX1 wht bckg" width="50">
-        <img src="PX ULTRA.jpg" alt="PX ULTRA" width="50">
-        <video width="640" height="360" controls>
-        <source src="Media1 PX.mp4" type="video/mp4">
+<!-- SLIDER -->
+<section class="modern-slider-section">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><video autoplay muted loop playsinline class="slider-video"><source src="Media1 PX.mp4" type="video/mp4"></video></div>
+            <div class="swiper-slide"><img src="APX.jpg" alt="APX"></div>
+            <div class="swiper-slide"><img src="PXT1.jpg" alt="PXT1"></div>
+            <div class="swiper-slide"><img src="34t3554.png" alt="34t3554"></div>
+            <div class="swiper-slide"><img src="OIP (1) PXT.jpg" alt="OIP PXT"></div>
+            <div class="swiper-slide"><img src="PX EXTING SCAN.JPG" alt="PX EXTING SCAN"></div>
+            <div class="swiper-slide"><img src="scanner-px1-avec-panneau-mtp.webp" alt="PX1 MTP"></div>
+            <div class="swiper-slide"><img src="PX1 wht bckg.jpg" alt="PX1"></div>
+            <div class="swiper-slide"><img src="PX ULTRA.jpg" alt="PX Ultra"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
 </section>
 
-<!-- À propos (texte justifié) -->
+<!-- À propos / Mission / Produits / Galerie / Contact (texte original 100%) -->
 <section id="apropos" class="section">
     <h2>À propos</h2>
     <div class="text-just">
@@ -50,7 +60,6 @@
     </div>
 </section>
 
-<!-- Mission (texte justifié) -->
 <section id="mission" class="section">
     <h2>Mission</h2>
     <div class="text-just">
@@ -58,82 +67,86 @@
     </div>
 </section>
 
-<!-- Produits -->
 <section id="produits" class="section">
     <h2>Produits</h2>
     <div class="products">
         <div class="card">
-            <img src="PX1.png" alt="PX1" width="200">
+            <img src="PX1.png" alt="PX1">
             <h3>PX1</h3>
-            <p class="text-just">Scanner à rayons X rétrodiffusés le PX1 est un système d'inspection non intrusif. Il permet la détection de menaces cachées lors des contrôles douaniers et aéroportuaires, aux checkpoints, des contre-mesures techniques de surveillance (TSCM), des bagages ou colis suspects. 
+            <p class="text-just">Scanner à rayons X rétrodiffusés le PX1 est un système d'inspection non intrusif. Il permet la détection de menaces cachées lors des contrôles douaniers et aéroportuaires, aux checkpoints, des contre-mesures techniques de surveillance (TSCM), des bagages ou colis suspects.
  Il est le plus léger du marché (moins de 5 kg), idéal pour les contrôles rapides, discrets et dans les zones restreintes. Le modèle PX1 est couramment utilisé à des fins de contrôle de sécurité et de détection des menaces, telles que les aéroports, les points de contrôle de sécurité, les passages frontaliers et les opérations militaires, dans le but de détecter les armes dissimulées, les explosifs, les drogues et autres articles de contrebande.</p>
         </div>
         <div class="card">
-            <img src="PXT MTP+.jpg" alt="PXT MTP+" width="200">
+            <img src="PXT MTP+.jpg" alt="PXT MTP+">
             <h3>PXT</h3>
             <p class="text-just">Le scanner portable à rayons X de transmission est un système d'inspection non intrusif. Le PXT repousse les normes en matière de technologie d’inspection et de traitement d’image. Notre technologie permet de numériser facilement n’importe quelle surface en quelques secondes et améliore automatiquement l’image pour de meilleurs résultats d’inspection. Il est l’imagerie à rayons-X de transmission portatif le plus puissant, confortable et maniable au monde, conçu pour les environnements exigeants et les inspections approfondies. Le PXT, peuvent aider les Douanes et les Forces armées et de sécurité à détecter les menaces dans les zones de guerre ou sensibles, à inspecter les véhicules, les infrastructures et les bâtiments. Il est non seulement conçu avec une technologie de pointe, mais il est à l'avant-garde de la lutte contre le terrorisme, offrant aux hommes de première ligne une précision et une rapidité inégalées dans la détection des menaces.</p>
         </div>
     </div>
 </section>
 
-<!-- Galerie -->
-<section id="galerie" class="slider">
+<section id="galerie" class="section">
     <h2>Galerie</h2>
-    <div class="gallery">
-        <img src="Burkina Faso Customs Training.jpg" alt="Burkina Faso Customs Training" onclick="openLightbox(this)">
-        <img src="Burkina Faso Customs.jpg" alt="Burkina Faso Customs" onclick="openLightbox(this)">
-        <img src="Customs Training BF.jpg" alt="Customs Training BF" onclick="openLightbox(this)">
-        <img src="BF.jpg" alt="BF" onclick="openLightbox(this)">
-        <img src="Customs BF.jpg" alt="Customs BF" onclick="openLightbox(this)">
-        <img src="Nigeria DHQ.jpeg" alt="Nigeria DHQ" onclick="openLightbox(this)">
-        <img src="Nigeria DHQ Demo (2).jpeg" alt="Nigeria DHQ Demo (2)" onclick="openLightbox(this)">
-        <img src="Nigeria DHQ Demo.jpeg" alt="Nigeria DHQ Demo" onclick="openLightbox(this)">
-        <img src="ASEC 2025- Ethiopia.jpeg" alt="ASEC 2025- Ethiopia" onclick="openLightbox(this)">
-        <img src="ASEC 2025 Addis.jpeg" alt="ASEC 2025 Addis" onclick="openLightbox(this)">
-        <img src="Cote d'ivoire Training.jpeg" alt="Cote d'ivoire Training" onclick="openLightbox(this)">
-        <img src="GSPR Traning- CI.jpeg" alt="GSPR Traning- CI" onclick="openLightbox(this)">
-        <img src="CI Training.jpeg" alt="CI Training" onclick="openLightbox(this)">
-        <img src="Training GSPR- CI.jpeg" alt="Training GSPR- CI" onclick="openLightbox(this)">
+    <div class="gallery-masonry">
+        <img src="Burkina Faso Customs Training.jpg" alt="" onclick="openLightbox(this)">
+        <img src="Burkina Faso Customs.jpg" alt="" onclick="openLightbox(this)">
+        <img src="Customs Training BF.jpg" alt="" onclick="openLightbox(this)">
+        <img src="BF.jpg" alt="" onclick="openLightbox(this)">
+        <img src="Customs BF.jpg" alt="" onclick="openLightbox(this)">
+        <img src="Nigeria DHQ.jpeg" alt="" onclick="openLightbox(this)">
+        <img src="Nigeria DHQ Demo (2).jpeg" alt="" onclick="openLightbox(this)">
+        <img src="Nigeria DHQ Demo.jpeg" alt="" onclick="openLightbox(this)">
+        <img src="ASEC 2025- Ethiopia.jpeg" alt="" onclick="openLightbox(this)">
+        <img src="ASEC 2025 Addis.jpeg" alt="" onclick="openLightbox(this)">
+        <img src="Cote d'ivoire Training.jpeg" alt="" onclick="openLightbox(this)">
+        <img src="GSPR Traning- CI.jpeg" alt="" onclick="openLightbox(this)">
+        <img src="CI Training.jpeg" alt="" onclick="openLightbox(this)">
+        <img src="Training GSPR- CI.jpeg" alt="" onclick="openLightbox(this)">
     </div>
 </section>
 
-<!-- Contact -->
 <section id="contact" class="section">
     <h2>Contactez-nous</h2>
     <div class="addresses">
-        <div class="addr">
-            <h3>Mali (Siège)</h3>
-            <p class="text-just">Banankabougou, Rue 634, Bamako, Mali<br>Tél : +223 71 08 08 05</p>
-        </div>
-        <div class="addr">
-            <h3>Côte d'Ivoire</h3>
-            <p class="text-just">Cocody, Angré 8è tranche, Imm. Les Terrasses d'Angré, Abidjan, Côte d'Ivoire<br>Tél : +225 07 19 96 97 82</p>
-        </div>
-        <div class="addr">
-            <h3>Burkina Faso</h3>
-            <p class="text-just">S/C 10 BP 506 OUAGA Aéroport 10 Secteur 16, Ouagadougou, Burkina Faso<br>Tél : +226 66 65 46 76</p>
-        </div>
+        <div class="addr"><h3>Mali (Siège)</h3><p class="text-just">Banankabougou, Rue 634, Bamako, Mali<br>Tél : +223 71 08 08 05</p></div>
+        <div class="addr"><h3>Côte d'Ivoire</h3><p class="text-just">Cocody, Angré 8è tranche, Imm. Les Terrasses d'Angré, Abidjan<br>Tél : +225 07 19 96 97 82</p></div>
+        <div class="addr"><h3>Burkina Faso</h3><p class="text-just">S/C 10 BP 506 OUAGA Aéroport 10 Secteur 16, Ouagadougou<br>Tél : +226 66 65 46 76</p></div>
     </div>
 </section>
 
-<!-- WhatsApp -->
-<a href="https://wa.me/22371080805" class="wa">+223 71 08 08 05</a>
-<a href="https://wa.me/2250719969782" class="wa ci">+225 07 19 96 97 82</a>
+<a href="https://wa.me/22371080805" class="wa mali" target="_blank">Mali +223 71 08 08 05</a>
+<a href="https://wa.me/2250719969782" class="wa ci" target="_blank">Côte d'Ivoire +225 07 19 96 97 82</a>
 
-<!-- Lightbox -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="">
-    <span class="close">&times;</span>
+    <span class="close" onclick="closeLightbox()">×</span>
 </div>
 
 <script>
+const swiper = new Swiper('.swiper', {
+    loop: true, autoplay: { delay: 3500, disableOnInteraction: false }, speed: 900,
+    effect: 'coverflow', grabCursor: true, centeredSlides: true, slidesPerView: 'auto',
+    coverflowEffect: { rotate: 30, stretch: 0, depth: 250, modifier: 1, slideShadows: true },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const gallery = document.querySelector('.gallery-masonry');
+    const images = Array.from(gallery.children);
+    for (let i = images.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        gallery.appendChild(images[j]);
+    }
+});
+
 function openLightbox(img) {
     document.getElementById('lightbox-img').src = img.src;
     document.getElementById('lightbox').style.display = 'flex';
 }
-function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-}
+function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
 </script>
 </body>
 </html>
