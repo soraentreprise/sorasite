@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SORA ENTREPRISE - Sécurité & Détection</title>
+    <title>SORA ENTREPRISE - Security & Detection</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
 
+<!-- BOUTON LANGUE -->
+<div class="lang-switch">
+    <span class="lang-btn active" data-lang="fr">FR</span>
+    <span class="lang-btn" data-lang="en">EN</span>
+</div>
+
 <header class="header">
     <div class="logo">
-        <img src="SE LOGO.png" alt="SORA Logo" class="header-logo">
+        <img src="SE LOGO.png" alt="SORA ENTREPRISE" class="header-logo">
     </div>
     <nav class="nav-links">
-        <a href="#accueil">Accueil</a>
-        <a href="#apropos">À propos</a>
-        <a href="#mission">Mission</a>
-        <a href="#produits">Produits</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#contact">Contact</a>
+        <a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
+        <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
+        <a href="#mission" data-fr="Mission" data-en="Mission">Mission</a>
+        <a href="#produits" data-fr="Produits" data-en="Products">Produits</a>
+        <a href="#galerie" data-fr="Média" data-en="Media">Média</a>
+        <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
     </nav>
     <div class="hamburger">Menu</div>
 </header>
 
-<!-- HERO local -->
 <section id="accueil" class="hero">
     <img src="hero.png" alt="SORA Hero" class="hero-img">
 </section>
 
-<!-- SLIDER -->
 <section class="modern-slider-section">
-    <div class="swiper">
+    <div class="swiper main-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><video autoplay muted loop playsinline class="slider-video"><source src="Media1 PX.mp4" type="video/mp4"></video></div>
-            <div class="swiper-slide"><img src="APX.jpg" alt="APX"></div>
+            <div class="swiper  swiper-slide"><img src="APX.jpg" alt="APX"></div>
             <div class="swiper-slide"><img src="PXT1.jpg" alt="PXT1"></div>
             <div class="swiper-slide"><img src="34t3554.png" alt="34t3554"></div>
             <div class="swiper-slide"><img src="OIP (1) PXT.jpg" alt="OIP PXT"></div>
@@ -50,62 +54,66 @@
     </div>
 </section>
 
-<!-- À propos / Mission / Produits / Galerie / Contact (texte original 100%) -->
 <section id="apropos" class="section">
-    <h2>À propos</h2>
-    <div class="text-just">
-        <p>La société SORA ENTREPRISE est une société spécialisée dans la commercialisation des équipements de contrôle de sécurité et d'investigations tels que les scanners portatifs et le Nirlight narcotiques. Notre société est représentée dans les grandes capitales des pays de l'Afrique de l'Ouest et au-delà à travers notre siège social au Mali et nos succursales SORA ENTREPRISE BF au Burkina Faso et SORA ENTREPRISE CI en Côte d'Ivoire pour mieux servir nos clients à proximité.</p>
-        <p>Elle a pour mission en Afrique : la promotion, l'offre et la vente des produits des marques Videray Technologies et Nirlab. Notre vision est d'aider à rendre notre société plus sûre, c'est pourquoi nous apportons des solutions techniques et technologiques à certains problèmes dont l'Afrique est confrontée en termes de sécurité.</p>
-        <p>SORA ENTREPRISE est aussi Partenaire Exclusif en Afrique de VIDERAY TECHNOLOGIES INC, une société américaine spécialisée dans la fabrication d'instruments d'inspection et de détection. Nous fournissons une large gamme de scanners portatifs à rayons X rétrodiffusés et de transmission de marque Videray, numéro un mondial de la sécurité numérique.</p>
+    <h2 data-fr="À propos" data-en="About Us">À propos</h2>
+    <div class="text-just" data-fr="La société SORA ENTREPRISE est une société spécialisée dans la commercialisation des équipements de contrôle de sécurité et d'investigations tels que les scanners portatifs et le Nirlight narcotiques. Notre société est représentée dans les grandes capitales des pays de l'Afrique de l'Ouest et au-delà à travers notre siège social au Mali et nos succursales SORA ENTREPRISE BF au Burkina Faso et SORA ENTREPRISE CI en Côte d'Ivoire pour mieux servir nos clients à proximité.<br><br>Elle a pour mission en Afrique : la promotion, l'offre et la vente des produits des marques Videray Technologies et Nirlab. Notre vision est d'aider à rendre notre société plus sûre, c'est pourquoi nous apportons des solutions techniques et technologiques à certains problèmes dont l'Afrique est confrontée en termes de sécurité.<br><br>SORA ENTREPRISE est aussi Partenaire Exclusif en Afrique de VIDERAY TECHNOLOGIES INC, une société américaine spécialisée dans la fabrication d'instruments d'inspection et de détection. Nous fournissons une large gamme de scanners portatifs à rayons X rétrodiffusés et de transmission de marque Videray, numéro un mondial de la sécurité numérique."
+       data-en="SORA ENTREPRISE is a company specialized in the marketing of security control and investigation equipment such as handheld scanners and Nirlight narcotics detectors. We are represented in the major capitals of West Africa and beyond through our headquarters in Mali and our branches SORA ENTREPRISE BF in Burkina Faso and SORA ENTREPRISE CI in Côte d'Ivoire to better serve our clients locally.<br><br>Our mission in Africa is the promotion, supply and sale of products from Videray Technologies and Nirlab brands. Our vision is to help make our society safer by providing technical and technological solutions to security challenges facing Africa.<br><br>SORA ENTREPRISE is also the Exclusive Partner in Africa of VIDERAY TECHNOLOGIES INC, an American company specializing in the manufacture of inspection and detection instruments. We supply a wide range of Videray backscatter and transmission handheld X-ray scanners, the world leader in digital security.">
+        La société SORA ENTREPRISE est une société spécialisée...
     </div>
 </section>
 
 <section id="mission" class="section">
-    <h2>Mission</h2>
-    <div class="text-just">
-        <p>Notre mission est d'identifier et d'analyser les besoins de nos partenaires et de proposer les meilleures offres techniques ou technologiques pour les couvrir. Pour assurer notre mission nous avons noué des partenariats stratégiques avec des firmes spécialisées afin d'offrir à nos clients les solutions optimales et conformes à l'état de l'art.</p>
+    <h2 data-fr="Mission" data-en="Our Mission">Mission</h2>
+    <div class="text-just" data-fr="Notre mission est d'identifier et d'analyser les besoins de nos partenaires et de proposer les meilleures offres techniques ou technologiques pour les couvrir. Pour assurer notre mission nous avons noué des partenariats stratégiques avec des firmes spécialisées afin d'offrir à nos clients les solutions optimales et conformes à l'état de l'art."
+       data-en="Our mission is to identify and analyze the needs of our partners and to offer the best technical or technological solutions. To fulfill this mission, we have established strategic partnerships with specialized companies to provide our clients with optimal, state-of-the-art solutions.">
+        Notre mission est d'identifier...
     </div>
 </section>
 
 <section id="produits" class="section">
-    <h2>Produits</h2>
+    <h2 data-fr="Produits" data-en="Products">Produits</h2>
     <div class="products">
         <div class="card">
-            <img src="PX1.png" alt="PX1">
+            <img src="PX1-optimised.jpg" alt="PX1">
             <h3>PX1</h3>
-            <p class="text-just">Scanner à rayons X rétrodiffusés le PX1 est un système d'inspection non intrusif. Il permet la détection de menaces cachées lors des contrôles douaniers et aéroportuaires, aux checkpoints, des contre-mesures techniques de surveillance (TSCM), des bagages ou colis suspects.
- Il est le plus léger du marché (moins de 5 kg), idéal pour les contrôles rapides, discrets et dans les zones restreintes. Le modèle PX1 est couramment utilisé à des fins de contrôle de sécurité et de détection des menaces, telles que les aéroports, les points de contrôle de sécurité, les passages frontaliers et les opérations militaires, dans le but de détecter les armes dissimulées, les explosifs, les drogues et autres articles de contrebande.</p>
+            <p class="text-just" data-fr="Scanner à rayons X rétrodiffusés le PX1 est un système d'inspection non intrusif..." data-en="The PX1 backscatter X-ray scanner is a non-intrusive inspection system...">Scanner à rayons X rétrodiffusés...</p>
         </div>
         <div class="card">
-            <img src="PXT MTP+.jpg" alt="PXT MTP+">
+            <img src="PXT-optimised.jpg" alt="PXT">
             <h3>PXT</h3>
-            <p class="text-just">Le scanner portable à rayons X de transmission est un système d'inspection non intrusif. Le PXT repousse les normes en matière de technologie d’inspection et de traitement d’image. Notre technologie permet de numériser facilement n’importe quelle surface en quelques secondes et améliore automatiquement l’image pour de meilleurs résultats d’inspection. Il est l’imagerie à rayons-X de transmission portatif le plus puissant, confortable et maniable au monde, conçu pour les environnements exigeants et les inspections approfondies. Le PXT, peuvent aider les Douanes et les Forces armées et de sécurité à détecter les menaces dans les zones de guerre ou sensibles, à inspecter les véhicules, les infrastructures et les bâtiments. Il est non seulement conçu avec une technologie de pointe, mais il est à l'avant-garde de la lutte contre le terrorisme, offrant aux hommes de première ligne une précision et une rapidité inégalées dans la détection des menaces.</p>
+            <p class="text-just" data-fr="Le scanner portable à rayons X de transmission..." data-en="The portable transmission X-ray scanner...">Le scanner portable à rayons X...</p>
         </div>
     </div>
 </section>
 
+<!-- SECTION MÉDIA – SLIDER -->
 <section id="galerie" class="section">
-    <h2>Galerie</h2>
-    <div class="gallery-masonry">
-        <img src="Burkina Faso Customs Training.jpg" alt="" onclick="openLightbox(this)">
-        <img src="Burkina Faso Customs.jpg" alt="" onclick="openLightbox(this)">
-        <img src="Customs Training BF.jpg" alt="" onclick="openLightbox(this)">
-        <img src="BF.jpg" alt="" onclick="openLightbox(this)">
-        <img src="Customs BF.jpg" alt="" onclick="openLightbox(this)">
-        <img src="Nigeria DHQ.jpeg" alt="" onclick="openLightbox(this)">
-        <img src="Nigeria DHQ Demo (2).jpeg" alt="" onclick="openLightbox(this)">
-        <img src="Nigeria DHQ Demo.jpeg" alt="" onclick="openLightbox(this)">
-        <img src="ASEC 2025- Ethiopia.jpeg" alt="" onclick="openLightbox(this)">
-        <img src="ASEC 2025 Addis.jpeg" alt="" onclick="openLightbox(this)">
-        <img src="Cote d'ivoire Training.jpeg" alt="" onclick="openLightbox(this)">
-        <img src="GSPR Traning- CI.jpeg" alt="" onclick="openLightbox(this)">
-        <img src="CI Training.jpeg" alt="" onclick="openLightbox(this)">
-        <img src="Training GSPR- CI.jpeg" alt="" onclick="openLightbox(this)">
+    <h2 data-fr="Média" data-en="Media">Média</h2>
+    <div class="media-slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide media-slide"><img src="Burkina Faso Customs Training.jpg"   onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="Burkina Faso Customs.jpg"          onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="Customs Training BF.jpg"           onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="BF.jpg"                            onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="Customs BF.jpg"                    onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="Nigeria DHQ.jpeg"                   onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="Nigeria DHQ Demo (2).jpeg"         onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="Nigeria DHQ Demo.jpeg"             onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="ASEC 2025- Ethiopia.jpeg"          onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="ASEC 2025 Addis.jpeg"              onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="Cote d'ivoire Training.jpeg"       onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="GSPR Traning- CI.jpeg"             onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="CI Training.jpeg"                  onclick="openLightbox(this)"></div>
+            <div class="swiper-slide media-slide"><img src="Training GSPR- CI.jpeg"            onclick="openLightbox(this)"></div>
+        </div>
+        <div class="swiper-button-next media-next"></div>
+        <div class="swiper-button-prev media-prev"></div>
+        <div class="swiper-pagination media-pagination"></div>
     </div>
 </section>
 
 <section id="contact" class="section">
-    <h2>Contactez-nous</h2>
+    <h2 data-fr="Contactez-nous" data-en="Contact Us">Contactez-nous</h2>
     <div class="addresses">
         <div class="addr"><h3>Mali (Siège)</h3><p class="text-just">Banankabougou, Rue 634, Bamako, Mali<br>Tél : +223 71 08 08 05</p></div>
         <div class="addr"><h3>Côte d'Ivoire</h3><p class="text-just">Cocody, Angré 8è tranche, Imm. Les Terrasses d'Angré, Abidjan<br>Tél : +225 07 19 96 97 82</p></div>
@@ -122,31 +130,32 @@
 </div>
 
 <script>
-const swiper = new Swiper('.swiper', {
-    loop: true, autoplay: { delay: 3500, disableOnInteraction: false }, speed: 900,
-    effect: 'coverflow', grabCursor: true, centeredSlides: true, slidesPerView: 'auto',
-    coverflowEffect: { rotate: 30, stretch: 0, depth: 250, modifier: 1, slideShadows: true },
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+// === CHANGEMENT DE LANGUE ===
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.documentElement.lang = lang;
+        document.querySelectorAll('[data-fr],[data-en]').forEach(el => {
+            if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.dataset[lang]) link.textContent = link.dataset[lang];
+        });
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const gallery = document.querySelector('.gallery-masonry');
-    const images = Array.from(gallery.children);
-    for (let i = images.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        gallery.appendChild(images[j]);
-    }
-});
+// Sliders
+const mainSwiper = new Swiper('.main-slider', { loop:true, autoplay:{delay:3500}, effect:'coverflow', grabCursor:true, centeredSlides:true, slidesPerView:'auto', coverflowEffect:{rotate:30,stretch:0,depth:250,modifier:1,slideShadows:true}, pagination:{el:'.swiper-pagination',clickable:true}, navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'} });
+const mediaSwiper = new Swiper('.media-slider', { loop:true, autoplay:{delay:3500}, speed:900, grabCursor:true, centeredSlides:true, slidesPerView:1.3, spaceBetween:20, breakpoints:{640:{slidesPerView:2},1024:{slidesPerView:3},1400:{slidesPerView:4}}, navigation:{nextEl:'.media-next',prevEl:'.media-prev'}, pagination:{el:'.media-pagination',clickable:true} });
 
-function openLightbox(img) {
-    document.getElementById('lightbox-img').src = img.src;
-    document.getElementById('lightbox').style.display = 'flex';
-}
+// Lightbox + Menu mobile + Protection images
+function openLightbox(img) { document.getElementById('lightbox-img').src = img.src; document.getElementById('lightbox').style.display = 'flex'; }
 function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
-document.querySelector('.hamburger').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('active');
-});
+document.querySelector('.hamburger').addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('active'));
+document.addEventListener('contextmenu', e => { if (e.target.tagName==='IMG') e.preventDefault(); });
+document.addEventListener('dragstart', e => { if (e.target.tagName==='IMG') e.preventDefault(); });
 </script>
 </body>
 </html>
