@@ -123,3 +123,27 @@ img:hover,.header-logo:hover,.main-slider .swiper-slide:hover img,.media-slide:h
     .nav-links.active{transform:translateY(0)}
     .card-img{height:320px}
 }
+
+/* TEXTES JUSTIFIÉS + TAILLE RÉDUITE & ÉLÉGANTE – NOUVELLE VERSION 2025 */
+.text-just,
+.card-content p,
+.addr p {text-align: justify !important;font-size: 1.18rem !important;line-height: 1.92 !important;max-width: 860px;margin-left: auto;margin-right: auto;color: #e0e0e0;}
+
+/* Produits : on garde la largeur de la carte */
+.card-content p {max-width: none;padding: 0 12px;}
+
+/* Contact : on garde la largeur de la carte */
+.addr p {max-width: none;padding: 0;margin: 12px 0 0;}
+
+/* Titres des sections un peu plus petits */
+.section h2,
+.contact-section h2 {font-size: 3.8rem !important;margin-bottom: 70px;}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .text-just,
+    .card-content p,
+    .addr p {font-size: 1.12rem !important;line-height: 1.88 !important;}
+    .section h2,
+    .contact-section h2 {font-size: 3.2rem !important;}
+}
