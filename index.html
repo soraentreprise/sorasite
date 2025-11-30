@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SORA ENTREPRISE - Security & Detection</title>
+    <meta name="theme-color" content="#9d4edd">
+
+    <!-- FAVICONS -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
 
-<!-- BOUTON LANGUE -->
+<!-- LANGUE -->
 <div class="lang-switch">
     <span class="lang-btn active" data-lang="fr">FR</span>
     <span class="lang-btn" data-lang="en">EN</span>
 </div>
 
+<!-- HEADER -->
 <header class="header">
     <div class="logo">
         <img src="SE LOGO.png" alt="SORA ENTREPRISE" class="header-logo">
@@ -24,22 +35,42 @@
         <a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
         <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
         <a href="#mission" data-fr="Mission" data-en="Mission">Mission</a>
-        <a href="#produits" data-fr="Produits" data-en="Products">Produits</a>
+
+        <!-- DROPDOWN PRODUITS -->
+        <div class="dropdown">
+            <a href="#produits" class="dropbtn" data-fr="Produits" data-en="Products">
+                Produits <span class="caret">▼</span>
+            </a>
+            <div class="dropdown-content">
+                <a href="#px1">PX1 Handheld X-ray Imager</a>
+                <a href="#pxt">PXT Handheld Transmission X-ray</a>
+            </div>
+        </div>
+
         <a href="#galerie" data-fr="Média" data-en="Media">Média</a>
         <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
     </nav>
     <div class="hamburger">Menu</div>
 </header>
 
+<!-- SLOGAN -->
+<div class="slogan-bar">
+    <span data-fr="Rendre notre société plus sûre" data-en="Making our society safer">
+        Rendre notre société plus sûre
+    </span>
+</div>
+
+<!-- HERO -->
 <section id="accueil" class="hero">
     <img src="hero.png" alt="SORA Hero" class="hero-img">
 </section>
 
+<!-- SLIDER ACCUEIL -->
 <section class="modern-slider-section">
     <div class="swiper main-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><video autoplay muted loop playsinline class="slider-video"><source src="Media1 PX.mp4" type="video/mp4"></video></div>
-            <div class="swiper  swiper-slide"><img src="APX.jpg" alt="APX"></div>
+            <div class="swiper-slide"><img src="APX.jpg" alt="APX"></div>
             <div class="swiper-slide"><img src="PXT1.jpg" alt="PXT1"></div>
             <div class="swiper-slide"><img src="34t3554.png" alt="34t3554"></div>
             <div class="swiper-slide"><img src="OIP (1) PXT.jpg" alt="OIP PXT"></div>
@@ -54,35 +85,62 @@
     </div>
 </section>
 
+<!-- À PROPOS -->
 <section id="apropos" class="section">
     <h2 data-fr="À propos" data-en="About Us">À propos</h2>
     <div class="text-just" data-fr="La société SORA ENTREPRISE est une société spécialisée dans la commercialisation des équipements de contrôle de sécurité et d'investigations tels que les scanners portatifs et le Nirlight narcotiques. Notre société est représentée dans les grandes capitales des pays de l'Afrique de l'Ouest et au-delà à travers notre siège social au Mali et nos succursales SORA ENTREPRISE BF au Burkina Faso et SORA ENTREPRISE CI en Côte d'Ivoire pour mieux servir nos clients à proximité.<br><br>Elle a pour mission en Afrique : la promotion, l'offre et la vente des produits des marques Videray Technologies et Nirlab. Notre vision est d'aider à rendre notre société plus sûre, c'est pourquoi nous apportons des solutions techniques et technologiques à certains problèmes dont l'Afrique est confrontée en termes de sécurité.<br><br>SORA ENTREPRISE est aussi Partenaire Exclusif en Afrique de VIDERAY TECHNOLOGIES INC, une société américaine spécialisée dans la fabrication d'instruments d'inspection et de détection. Nous fournissons une large gamme de scanners portatifs à rayons X rétrodiffusés et de transmission de marque Videray, numéro un mondial de la sécurité numérique."
-       data-en="SORA ENTREPRISE is a company specialized in the marketing of security control and investigation equipment such as handheld scanners and Nirlight narcotics detectors. We are represented in the major capitals of West Africa and beyond through our headquarters in Mali and our branches SORA ENTREPRISE BF in Burkina Faso and SORA ENTREPRISE CI in Côte d'Ivoire to better serve our clients locally.<br><br>Our mission in Africa is the promotion, supply and sale of products from Videray Technologies and Nirlab brands. Our vision is to help make our society safer by providing technical and technological solutions to security challenges facing Africa.<br><br>SORA ENTREPRISE is also the Exclusive Partner in Africa of VIDERAY TECHNOLOGIES INC, an American company specializing in the manufacture of inspection and detection instruments. We supply a wide range of Videray backscatter and transmission handheld X-ray scanners, the world leader in digital security.">
-        La société SORA ENTREPRISE est une société spécialisée...
+         data-en="SORA ENTREPRISE is a company specialized in the marketing of security control and investigation equipment such as handheld scanners and Nirlight narcotics detectors. We are represented in the major capitals of West Africa and beyond through our headquarters in Mali and our branches SORA ENTREPRISE BF in Burkina Faso and SORA ENTREPRISE CI in Côte d'Ivoire to better serve our clients locally.<br><br>Our mission in Africa is the promotion, supply and sale of products from Videray Technologies and Nirlab brands. Our vision is to help make our society safer by providing technical and technological solutions to security challenges facing Africa.<br><br>SORA ENTREPRISE is also the Exclusive Partner in Africa of VIDERAY TECHNOLOGIES INC, an American company specializing in the manufacture of inspection and detection instruments. We supply a wide range of Videray backscatter and transmission handheld X-ray scanners, the world leader in digital security.">
+        La société SORA ENTREPRISE est une société spécialisée dans la commercialisation des équipements de contrôle de sécurité et d'investigations tels que les scanners portatifs et le Nirlight narcotiques. Notre société est représentée dans les grandes capitales des pays de l'Afrique de l'Ouest et au-delà à travers notre siège social au Mali et nos succursales SORA ENTREPRISE BF au Burkina Faso et SORA ENTREPRISE CI en Côte d'Ivoire pour mieux servir nos clients à proximité.<br><br>Elle a pour mission en Afrique : la promotion, l'offre et la vente des produits des marques Videray Technologies et Nirlab. Notre vision est d'aider à rendre notre société plus sûre, c'est pourquoi nous apportons des solutions techniques et technologiques à certains problèmes dont l'Afrique est confrontée en termes de sécurité.<br><br>SORA ENTREPRISE est aussi Partenaire Exclusif en Afrique de VIDERAY TECHNOLOGIES INC, une société américaine spécialisée dans la fabrication d'instruments d'inspection et de détection. Nous fournissons une large gamme de scanners portatifs à rayons X rétrodiffusés et de transmission de marque Videray, numéro un mondial de la sécurité numérique.
     </div>
 </section>
 
+<!-- MISSION -->
 <section id="mission" class="section">
     <h2 data-fr="Mission" data-en="Our Mission">Mission</h2>
     <div class="text-just" data-fr="Notre mission est d'identifier et d'analyser les besoins de nos partenaires et de proposer les meilleures offres techniques ou technologiques pour les couvrir. Pour assurer notre mission nous avons noué des partenariats stratégiques avec des firmes spécialisées afin d'offrir à nos clients les solutions optimales et conformes à l'état de l'art."
-       data-en="Our mission is to identify and analyze the needs of our partners and to offer the best technical or technological solutions. To fulfill this mission, we have established strategic partnerships with specialized companies to provide our clients with optimal, state-of-the-art solutions.">
-        Notre mission est d'identifier...
+         data-en="Our mission is to identify and analyze the needs of our partners and to offer the best technical or technological solutions. To fulfill this mission, we have established strategic partnerships with specialized companies to provide our clients with optimal, state-of-the-art solutions.">
+        Notre mission est d'identifier et d'analyser les besoins de nos partenaires et de proposer les meilleures offres techniques ou technologiques pour les couvrir. Pour assurer notre mission nous avons noué des partenariats stratégiques avec des firmes spécialisées afin d'offrir à nos clients les solutions optimales et conformes à l'état de l'art.
     </div>
 </section>
 
+<!-- PRODUITS -->
 <section id="produits" class="section">
     <h2 data-fr="Produits" data-en="Products">Produits</h2>
     <div class="products">
-        <div class="card">
+
+        <div class="card" id="px1">
             <img src="PX1-optimised.jpg" alt="PX1">
-            <h3>PX1</h3>
-            <p class="text-just" data-fr="Scanner à rayons X rétrodiffusés le PX1 est un système d'inspection non intrusif..." data-en="The PX1 backscatter X-ray scanner is a non-intrusive inspection system...">Scanner à rayons X rétrodiffusés...</p>
+            <h3>PX1 Handheld X-ray Imager</h3>
+            <p class="short-desc" data-fr="Scanner à rayons X rétrodiffusés ultra-léger (&lt; 5 kg)" data-en="Ultra-light backscatter X-ray scanner (&lt; 5 kg)">
+                Scanner à rayons X rétrodiffusés ultra-léger (&lt; 5 kg)
+            </p>
+            <button class="btn-more" onclick="toggleDesc(this)">
+                <span data-fr="En savoir plus" data-en="Learn more">En savoir plus</span>
+                <span class="arrow">Down Arrow</span>
+            </button>
+            <div class="full-desc">
+                <p data-fr="Scanner à rayons X rétrodiffusés le PX1 est un système d'inspection non intrusif. Il permet la détection de menaces cachées lors des contrôles douaniers et aéroportuaires, aux checkpoints, des contre-mesures techniques de surveillance (TSCM), des bagages ou colis suspects. Il est le plus léger du marché (moins de 5 kg), idéal pour les contrôles rapides, discrets et dans les zones restreintes. Le modèle PX1 est couramment utilisé à des fins de contrôle de sécurité et de détection des menaces, telles que les aéroports, les points de contrôle de sécurité, les passages frontaliers et les opérations militaires, dans le but de détecter les armes dissimulées, les explosifs, les drogues et autres articles de contrebande."
+                   data-en="The PX1 backscatter X-ray scanner is a non-intrusive inspection system. It enables the detection of hidden threats during customs and airport checks, at checkpoints, technical surveillance countermeasures (TSCM), and suspicious luggage or packages. It is the lightest on the market (under 5 kg), ideal for rapid, discreet inspections in confined areas. The PX1 model is widely used for security control and threat detection in airports, security checkpoints, border crossings, and military operations to detect concealed weapons, explosives, drugs, and other contraband items."></p>
+            </div>
         </div>
-        <div class="card">
+
+        <div class="card" id="pxt">
             <img src="PXT-optimised.jpg" alt="PXT">
-            <h3>PXT</h3>
-            <p class="text-just" data-fr="Le scanner portable à rayons X de transmission..." data-en="The portable transmission X-ray scanner...">Le scanner portable à rayons X...</p>
+            <h3>PXT Handheld Transmission X-ray</h3>
+            <p class="short-desc" data-fr="Scanner portable à rayons X de transmission le plus puissant du monde"
+                                 data-en="World’s most powerful handheld transmission X-ray scanner">
+                Scanner portable à rayons X de transmission le plus puissant du monde
+            </p>
+            <button class="btn-more" onclick="toggleDesc(this)">
+                <span data-fr="En savoir plus" data-en="Learn more">En savoir plus</span>
+                <span class="arrow">Down Arrow</span>
+            </button>
+            <div class="full-desc">
+                <p data-fr="Le scanner portable à rayons X de transmission est un système d'inspection non intrusif. Le PXT repousse les normes en matière de technologie d’inspection et de traitement d’image. Notre technologie permet de numériser facilement n’importe quelle surface en quelques secondes et améliore automatiquement l’image pour de meilleurs résultats d’inspection. Il est l’imagerie à rayons-X de transmission portatif le plus puissant, confortable et maniable au monde, conçu pour les environnements exigeants et les inspections approfondies. Le PXT peut aider les Douanes et les Forces armées et de sécurité à détecter les menaces dans les zones de guerre ou sensibles, à inspecter les véhicules, les infrastructures et les bâtiments. Il est non seulement conçu avec une technologie de pointe, mais il est à l'avant-garde de la lutte contre le terrorisme, offrant aux hommes de première ligne une précision et une rapidité inégalées dans la détection des menaces."
+                   data-en="The portable transmission X-ray scanner is a non-intrusive inspection system. The PXT pushes the boundaries of inspection technology and image processing. Our technology enables any surface to be scanned in seconds with automatic image enhancement for optimal results. It is the most powerful, comfortable, and maneuverable handheld transmission X-ray imaging system in the world, designed for demanding environments and in-depth inspections. The PXT helps Customs and Armed Forces detect threats in war zones or sensitive areas, inspect vehicles, infrastructure, and buildings. It is not only built with cutting-edge technology but is also at the forefront of the fight against terrorism, offering frontline personnel unmatched precision and speed in threat detection."></p>
+            </div>
         </div>
+
     </div>
 </section>
 
@@ -129,8 +187,9 @@
     <span class="close" onclick="closeLightbox()">×</span>
 </div>
 
+<!-- SCRIPTS -->
 <script>
-// === CHANGEMENT DE LANGUE ===
+// CHANGEMENT DE LANGUE
 document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const lang = btn.dataset.lang;
@@ -138,17 +197,32 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
         document.querySelectorAll('[data-fr],[data-en]').forEach(el => {
             if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
         });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            if (link.dataset[lang]) link.textContent = link.dataset[lang];
+        document.querySelectorAll('.nav-links a, .dropbtn').forEach(link => {
+            if (link.dataset[lang]) link.childNodes[0].textContent = link.dataset[lang];
         });
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
     });
 });
 
-// Sliders
+// SLIDERS
 const mainSwiper = new Swiper('.main-slider', { loop:true, autoplay:{delay:3500}, effect:'coverflow', grabCursor:true, centeredSlides:true, slidesPerView:'auto', coverflowEffect:{rotate:30,stretch:0,depth:250,modifier:1,slideShadows:true}, pagination:{el:'.swiper-pagination',clickable:true}, navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'} });
 const mediaSwiper = new Swiper('.media-slider', { loop:true, autoplay:{delay:3500}, speed:900, grabCursor:true, centeredSlides:true, slidesPerView:1.3, spaceBetween:20, breakpoints:{640:{slidesPerView:2},1024:{slidesPerView:3},1400:{slidesPerView:4}}, navigation:{nextEl:'.media-next',prevEl:'.media-prev'}, pagination:{el:'.media-pagination',clickable:true} });
+
+// EN SAVOIR PLUS
+function toggleDesc(btn) {
+    const full = btn.closest('.card').querySelector('.full-desc');
+    full.classList.toggle('open');
+    btn.classList.toggle('active');
+}
+
+// DROPDOWN MOBILE
+document.querySelector('.dropbtn')?.addEventListener('click', function(e) {
+    if (window.innerWidth <= 868) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('active');
+    }
+});
 
 // Lightbox + Menu mobile + Protection images
 function openLightbox(img) { document.getElementById('lightbox-img').src = img.src; document.getElementById('lightbox').style.display = 'flex'; }
