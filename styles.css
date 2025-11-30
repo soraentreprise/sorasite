@@ -51,13 +51,30 @@ h2{font-size:4.5rem;margin-bottom:90px;background:linear-gradient(90deg,#9d4edd,
 .card-content h3{font-size:2.4rem;background:linear-gradient(90deg,#9d4edd,#ff69b4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:28px}
 .card-content p{font-size:1.26rem;line-height:1.85;text-align:justify;opacity:0.95}
 
+/* CONTACT – Ton design exact */
+.contact-section{padding:140px 5% 160px}
+.contact-section h2{margin-bottom:90px}
+.addresses{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:50px;max-width:1400px; margin:0 auto;}
+.addr{background:rgba(255,255,255,0.04);padding:40px 35px;border-radius:28px;border:2px solid rgba(157,78,221,0.3);box-shadow:0 20px 60px rgba(0,0,0,0.7);transition:all .4s;}
+.addr:hover{transform:translateY(-12px);border-color:#ff69b4;box-shadow:0 30px 80px rgba(157,78,221,0.5);}
+.addr h3{font-size:2.1rem;background:linear-gradient(90deg,#9d4edd,#ff69b4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px;}
+.addr p{font-size:1.35rem;line-height:1.9;color:#e0e0e0;}
+.addr a{color:#9d4edd;text-decoration:none;}
+.addr a:hover{color:#ff69b4;text-decoration:underline;}
+
 /* CONTACT & WHATSAPP */
-.addresses { gap:40px; margin-top:30px !important; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
-.addr { background:rgba(255,255,255,0.02); padding:40px; border-radius:20px; text-align:center; }
-.wa { position:fixed; bottom:30px; background:#25D366; color:#fff; padding:16px 28px; border-radius:50px; z-index:999; box-shadow:0 10px 35px rgba(37,211,102,0.6); font-weight:bold; text-decoration:none; transition:.3s; }
-.wa:hover { transform:translateY(-5px) scale(1.08); }
-.wa.mali { right:30px; }
-.wa.ci { right:30px; bottom:100px; background:#9d4edd; box-shadow:0 10px 35px rgba(157,78,221,0.6); }
+.wa{position:fixed;right:30px;background:#25D366;color:#fff;padding:14px 24px;border-radius:50px;font-weight:bold;font-size:1.1rem;text-decoration:none;box-shadow:0 8px 30px rgba(37,211,102,0.6);z-index:998;transition:all .3s;}
+.wa:hover{transform:scale(1.08);background:#128C7E;}
+.wa-mali{bottom:30px}
+.wa-ci{bottom:90px}
+.wa-bf{bottom:150px}
+
+@media (max-width:768px){
+    .wa{right:20px;padding:12px 20px;font-size:1rem;}
+    .wa-mali{bottom:20px}
+    .wa-ci{bottom:75px}
+    .wa-bf{bottom:130px}
+}
 
 /* TRAITEMENT IMAGES CLAIRES */
 img,.header-logo,.hero img,.main-slider img,.slider-video,.card img,.media-slide img,.lightbox img {
