@@ -7,6 +7,9 @@
     <meta name="theme-color" content="#9d4edd">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Préchargement pour zéro flash -->
+    <link rel="preload" as="image" href="SE LOGO.png">
+    <link rel="preload" as="video" href="Media1 PX.mp4">
 </head>
 <body>
 
@@ -20,35 +23,36 @@
 <!-- HEADER -->
 <header class="header">
     <div class="logo">
-        <img src="SE LOGO.png" alt="SE LOGO" class="header-logo">
-
+        <a href="#"><img src="SE LOGO.png" alt="SORA Entreprise" class="header-logo"></a>
     </div>
     <nav class="nav-links">
         <a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
         <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
         <a href="#mission" data-fr="Mission" data-en="Mission">Mission</a>
         <a href="#produits" data-fr="Produits" data-en="Products">Produits</a>
-
-            </div>
-        </div>
         <a href="#galerie" data-fr="Média" data-en="Media">Média</a>
         <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
     </nav>
     <div class="hamburger">Menu</div>
 </header>
-</div>
-   
-</section>
 
-<!-- SLIDER -->
-
-<section class="modern-slider-section">
+<!-- SLIDER PRINCIPAL -->
+<section class="modern-slider-section" id="accueil">
     <div class="swiper main-slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><video autoplay muted loop playsinline><source src="Media1 PX.mp4" type="video/mp4"></video></div>
-            <div class="swiper-slide"><video autoplay muted loop playsinline><source src="ULTRA.mp4" type="video/mp4"></video></div>
-
-            <div class="swiper-slide"><img src="APX.jpg" alt="APX"></div>
+            <div class="swiper-slide">
+                <video autoplay muted loop playsinline poster="APX.jpg">
+                    <source src="Media1 PX.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <video autoplay muted loop playsinline poster="APX.jpg">
+                    <source src="ULTRA.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <img src="APX.jpg" alt="APX">
+            </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -142,11 +146,15 @@
 
 <a href="https://wa.me/22371080805" class="wa mali" target="_blank">Mali +223 71 08 08 05</a>
 <a href="https://wa.me/2250719969782" class="wa ci" target="_blank">Côte d'Ivoire +225 07 19 96 97 82</a>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-<script>
-// CHANGEMENT DE LANGUE PARFAIT
+    
+   <!-- LIGHTBOX -->
+<div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="Agrandissement">
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+/* === CHANGEMENT DE LANGUE === */
 document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const lang = btn.dataset.lang;
@@ -154,29 +162,42 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
         document.querySelectorAll('[data-fr],[data-en]').forEach(el => {
             if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
         });
-        document.querySelectorAll('.nav-links a, .dropbtn').forEach(link => {
-            if (link.dataset[lang]) {
-                link.childNodes[0].textContent = link.dataset[lang];
-            }
-        });
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        localStorage.setItem('lang', lang);
     });
 });
+const savedLang = localStorage.getItem('lang') || 'fr';
+document.querySelector(`.lang-btn[data-lang="${savedLang}"]`).click();
 
-// SLIDER + MENU MOBILE
+/* === LIGHTBOX === */
+function openLightbox(el) {
+    document.getElementById('lightbox-img').src = el.src;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+
+/* === SWIPER === */
 new Swiper('.main-slider', {
-    loop:true, autoplay:{delay:4000}, centeredSlides:true, slidesPerView:1.2, spaceBetween:30,
-    grabCursor:true, pagination:{el:'.swiper-pagination',clickable:true},
-    navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'},
-    breakpoints:{768:{slidesPerView:2},1024:{slidesPerView:2.5}}
-
+    loop: true, autoplay: {delay: 5000}, centeredSlides: true,
+    slidesPerView: 1.2, spaceBetween: 30, grabCursor: true,
+    pagination: {el: '.swiper-pagination', clickable: true},
+    navigation: {nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'},
+    breakpoints: {768: {slidesPerView: 2}, 1024: {slidesPerView: 2.5}}
+});
+new Swiper('.media-slider', {
+    loop: true, slidesPerView: 1.5, spaceBetween: 20, centeredSlides: true,
+    pagination: {el: '.media-pagination', clickable: true},
+    navigation: {nextEl: '.media-next', prevEl: '.media-prev'},
+    breakpoints: {640: {slidesPerView: 3}, 1024: {slidesPerView: 5}}
 });
 
+/* === MENU MOBILE === */
 document.querySelector('.hamburger').addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('active');
-    document.querySelector('.hamburger').classList.toggle('active');
+    document.querySelector('.hamburger').textContent = 
+        document.querySelector('.nav-links').classList.contains('active') ? '×' : 'Menu';
 });
 </script>
+
 </body>
 </html>
