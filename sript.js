@@ -9,7 +9,6 @@ function toggleMenu() {
    CARTE AFRIQUE INTERACTIVE
 ------------------------------ */
 
-/* Liste des pays + produits + description */
 const presence = {
     "ML": {
         name: "Mali",
