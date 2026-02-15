@@ -9,6 +9,10 @@
     <meta name="keywords" content="inspection rayons x, détection narcotique, sécurité Afrique, contrôle aux frontières, anti-contrebande, Videray, Nirlab">
 
     <link rel="stylesheet" href="styles.css">
+<!-- Préchargement pour zéro flash -->
+    <link rel="preload" as="image" href="logo.png">
+    <link rel="preload" as="video" href="Media1 PX.mp4">
+    <link rel="preload" as="image" href="ULTRA.mp4">
 </head>
 
 <body>
@@ -48,37 +52,28 @@
 <section class="hero">
     <div class="hero-content">
         <h1>Solutions d’Inspection & de Détection de Nouvelle Génération</h1>
-<section class="media-slider-section">
-    <h2>Médias</h2>
-
-    <div class="media-slider-container">
-        <div class="media-slider">
-
-            <!-- Image -->
-            <div class="media-item">
-                <img src="SEE THROUGH 1.jpg" alt="SEE THROUGH 1">
-            </div>
-
-            <!-- Vidéo 1 -->
-            <div class="media-item">
-                <video controls>
+<!-- SLIDER PRINCIPAL -->
+<section class="modern-slider-section" id="accueil">
+    <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <video autoplay muted loop playsinline poster="APX.jpg">
                     <source src="Media1 PX.mp4" type="video/mp4">
                 </video>
             </div>
-
-            <!-- Vidéo 2 -->
-            <div class="media-item">
-                <video controls>
+            <div class="swiper-slide">
+                <video autoplay muted loop playsinline poster="APX.jpg">
                     <source src="ULTRA.mp4" type="video/mp4">
                 </video>
             </div>
-
+            <div class="swiper-slide">
+                <img src="APX.jpg" alt="APX">
+            </div>
+     
         </div>
-    </div>
-
-    <div class="media-slider-buttons">
-        <button class="media-btn" onclick="mediaSlideLeft()">◀</button>
-        <button class="media-btn" onclick="mediaSlideRight()">▶</button>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
 </section>
         <p>Partenaire officiel Videray Technologies & Nirlab pour l’Afrique de l’Ouest et Centrale.</p>
