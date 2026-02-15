@@ -44,11 +44,11 @@ const presence = {
 };
 
 /* Interaction avec la carte */
-document.querySelectorAll(".country").forEach(country => {
-    country.addEventListener("click", () => {
-        const code = country.id;
-        const info = presence[code];
-
+document.querySelectorAll('.country').forEach(country => {
+    country.addEventListener('click', () => {
+        const id = country.id;
+        alert("Pays sélectionné : " + id);
+   
         if (info) {
             document.getElementById("country-name").innerText = info.name;
             document.getElementById("country-details").innerText =
@@ -59,3 +59,35 @@ document.querySelectorAll(".country").forEach(country => {
         }
     });
 });
+let slider = document.querySelector('.slider');
+let offset = 0;
+
+function slideRight() {
+    if (offset > -((slider.children.length - 1) * 320)) {
+        offset -= 320;
+        slider.style.transform = `translateX(${offset}px)`;
+    }
+}
+
+function slideLeft() {
+    if (offset < 0) {
+        offset += 320;
+        slider.style.transform = `translateX(${offset}px)`;
+    }
+}
+let mediaSlider = document.querySelector('.media-slider');
+let mediaOffset = 0;
+
+function mediaSlideRight() {
+    if (mediaOffset > -((mediaSlider.children.length - 1) * 370)) {
+        mediaOffset -= 370;
+        mediaSlider.style.transform = `translateX(${mediaOffset}px)`;
+    }
+}
+
+function mediaSlideLeft() {
+    if (mediaOffset < 0) {
+        mediaOffset += 370;
+        mediaSlider.style.transform = `translateX(${mediaOffset}px)`;
+    }
+}

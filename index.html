@@ -47,8 +47,41 @@
 
 <section class="hero">
     <div class="hero-content">
-        <h1>Solutions d’Inspection & Détection de Nouvelle Génération</h1>
-        <p>Partenaire officiel Videray Technologies & Nirlab pour l’Afrique de l’Ouest.</p>
+        <h1>Solutions d’Inspection & de Détection de Nouvelle Génération</h1>
+<section class="media-slider-section">
+    <h2>Médias</h2>
+
+    <div class="media-slider-container">
+        <div class="media-slider">
+
+            <!-- Image -->
+            <div class="media-item">
+                <img src="SEE THROUGH 1.jpg" alt="SEE THROUGH 1">
+            </div>
+
+            <!-- Vidéo 1 -->
+            <div class="media-item">
+                <video controls>
+                    <source src="Media1 PX.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Vidéo 2 -->
+            <div class="media-item">
+                <video controls>
+                    <source src="ULTRA.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="media-slider-buttons">
+        <button class="media-btn" onclick="mediaSlideLeft()">◀</button>
+        <button class="media-btn" onclick="mediaSlideRight()">▶</button>
+    </div>
+</section>
+        <p>Partenaire officiel Videray Technologies & Nirlab pour l’Afrique de l’Ouest et Centrale.</p>
 
         <div class="hero-buttons">
             <a href="solutions.html" class="btn-primary">Découvrir nos solutions</a>
@@ -109,21 +142,51 @@
     <p>Découvrez les pays où nos solutions sont présentées et déployées.</p>
 
     <div id="africa-map">
-        <svg viewBox="0 0 800 800" class="africa-svg">
 
-            <path id="ML" class="country" d="M300 200 L350 180 L380 220 L360 260 L310 250 Z" />
-            <path id="BF" class="country" d="M350 260 L390 250 L420 280 L380 300 L340 290 Z" />
-            <path id="CI" class="country" d="M320 300 L360 310 L350 350 L300 340 Z" />
-            <path id="NGA" class="country" d="M430 330 L470 320 L500 350 L480 380 L440 370 Z" />
-            <path id="GH" class="country" d="M360 330 L380 330 L380 370 L360 370 Z" />
-            <path id="GMB" class="country" d="M255 255 L280 255 L280 265 L255 265 Z" />
+           <svg class="africa-map" viewBox="0 0 800 800">
 
-        </svg>
+    <!-- Mali -->
+    <path id="ML" class="country" d="M260 260 L330 230 L380 260 L360 330 L300 330 Z" />
+
+    <!-- Burkina Faso -->
+    <path id="BF" class="country" d="M300 330 L360 330 L380 360 L340 390 L300 380 Z" />
+
+    <!-- Côte d'Ivoire -->
+    <path id="CI" class="country" d="M260 360 L320 360 L340 400 L300 440 L260 430 Z" />
+
+    <!-- Ghana -->
+    <path id="GH" class="country" d="M340 400 L380 400 L390 450 L350 460 Z" />
+
+    <!-- Nigeria -->
+    <path id="NGA" class="country" d="M430 330 L480 320 L520 360 L490 400 L440 390 Z" />
+
+    <!-- Gambie -->
+    <path id="GMB" class="country" d="M200 270 L240 270 L240 280 L200 280 Z" />
+
+</svg>
+
     </div>
 
     <div id="country-info" class="country-info">
         <h3 id="country-name"></h3>
         <p id="country-details"></p>
+    </div>
+<section class="media-section">
+    <h2>Médias</h2>
+    <p>Découvrez nos images et démonstrations.</p>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="scanner-px1-avec-panneau-mtp.webp" alt="PX1">
+            <img src="SEE THROUGH 2.jpg" alt="PX1">
+            <img src="SEE THROUGH PANEL.jpg" alt="PXT">
+            <img src="nirLight.jpeg" alt="Nirlight">
+        </div>
+    </div>
+
+    <div class="slider-buttons">
+        <button class="slide-btn" onclick="slideLeft()">◀</button>
+        <button class="slide-btn" onclick="slideRight()">▶</button>
     </div>
 </section>
 
