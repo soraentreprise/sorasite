@@ -10,56 +10,37 @@ function toggleMenu() {
 ------------------------------ */
 
 const presence = {
-    "ML": {
-        name: "Mali",
-        products: ["PX1", "PXT", "Nirlight"],
-        details: "Présence opérationnelle et déploiements actifs."
-    },
     "BF": {
         name: "Burkina Faso",
-        products: ["PX1", "Nirlight"],
-        details: "Déploiements en cours dans les forces de sécurité."
+        products: ["PX1", "PXT"],
+        details: "Présence opérationnelle et déploiements actifs."
     },
     "CI": {
         name: "Côte d’Ivoire",
         products: ["PX1", "PXT"],
-        details: "Utilisation dans les infrastructures critiques."
-    },
-    "SN": {
-        name: "Sénégal",
-        products: ["Nirlight"],
-        details: "Analyse narcotique et contrôle aux frontières."
-    },
-    "NE": {
-        name: "Niger",
-        products: ["PX1"],
-        details: "Présence stratégique dans les zones frontalières."
-    },
-    "GN": {
-        name: "Guinée",
-        products: ["PX1"],
-        details: "Déploiements dans les unités de sécurité."
-    },
-    "TG": {
-        name: "Togo",
-        products: ["Nirlight"],
-        details: "Utilisation dans les opérations de contrôle."
+        details: "Présence opérationnelle et déploiements dans les unités de sécurité et opérations gouvernementales."
     },
     "GH": {
         name: "Ghana",
-        products: ["PX1", "Nirlight"],
-        details: "Présence croissante dans les infrastructures critiques."
-    },
-    "BJ": {
-        name: "Bénin",
-        products: ["PX1"],
-        details: "Déploiements en cours dans les douanes."
-    },
-    "CM": {
-        name: "Cameroun",
         products: ["PX1", "PXT"],
-        details: "Utilisation dans les opérations gouvernementales."
+        details: "Démonstration à L'Etat Major des Armeés et au National Control Commission."
+    },
+    "GMB": {
+        name: "Gambie",
+        products: ["PX1", "PXT"],
+        details: "Démonstration au GRA ."
+    },
+    "ML": {
+        name: "Mali",
+        products: ["PX1", "PXT"],
+        details: "Démonstration à la Douane."
+    },
+    "NGA": {
+        name: "Nigeria",
+        products: ["PX1", "PXT"],
+        details: "Démonstration au Quartier général de la Défense."
     }
+
 };
 
 /* Interaction avec la carte */
