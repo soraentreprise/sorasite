@@ -1,20 +1,28 @@
-/* =========================================================
-   RESET
-========================================================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================================================
-   BASE GLOBALE
-========================================================= */
+/* BACKGROUND PREMIUM (Option 1) */
 body {
     font-family: 'Inter', sans-serif;
-    background: #111216;
+    background: linear-gradient(135deg, #0f0f17, #1a1033, #0d1a2b);
+    background-attachment: fixed;
     color: #e8e8e8;
     line-height: 1.7;
+}
+
+/* Effet lumineux subtil */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(106,0,255,0.15), transparent 60%),
+                radial-gradient(circle at 80% 80%, rgba(0,180,255,0.12), transparent 60%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 h1, h2, h3 {
@@ -26,58 +34,52 @@ h1, h2, h3 {
 p, li {
     text-align: justify;
     font-size: 1.05rem;
+    margin-bottom: 12px;
 }
-
-/* =========================================================
-   HEADER MODERNE + STICKY + ANIMATION + NEON
-========================================================= */
 header {
-    background: #111216;
+    background: rgba(17,18,22,0.85);
+    backdrop-filter: blur(6px);
     padding: 20px 40px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     position: sticky;
     top: 0;
     z-index: 999;
-
     animation: headerFade 0.8s ease forwards;
     opacity: 0;
     transform: translateY(-20px);
 }
 
 @keyframes headerFade {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    to { opacity: 1; transform: translateY(0); }
 }
 
+/* LOGO AGRANDI */
 .logo img {
-    height: 85px;
-    filter: drop-shadow(0 0 10px rgba(106,0,255,0.6));
+    height: 110px;
+    filter: drop-shadow(0 0 12px rgba(106,0,255,0.6));
     transition: 0.3s ease;
 }
 
 .logo img:hover {
-    filter: drop-shadow(0 0 16px rgba(106,0,255,0.9));
-    transform: scale(1.03);
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 18px rgba(106,0,255,0.9));
 }
 
 /* MENU */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 35px;
+    gap: 40px;
 }
 
 nav ul li a {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1.5px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #e8e8e8;
     position: relative;
     transition: 0.3s ease;
@@ -103,7 +105,6 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
-
 /* DROPDOWN */
 .dropdown {
     position: relative;
@@ -160,30 +161,40 @@ nav ul li a:hover::after {
     color: white;
 }
 
-/* =========================================================
-   HERO
-========================================================= */
 .hero {
-    padding: 140px 20px;
+    padding: 150px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #111216, #181a20);
-    border-radius: 12px;
-    margin: 40px auto;
+    background: rgba(20,20,35,0.6);
+    border-radius: 16px;
+    margin: 60px auto;
     width: 90%;
-    animation: fadeIn 1s ease forwards;
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 1s ease forwards;
     opacity: 0;
 }
 
+/* Effet futuriste */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(106,0,255,0.25), transparent 60%),
+                radial-gradient(circle at 70% 80%, rgba(0,180,255,0.25), transparent 60%);
+    pointer-events: none;
+}
+
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1.25rem;
+    max-width: 750px;
+    margin: 0 auto;
 }
-
 /* =========================================================
    SOLUTIONS
 ========================================================= */
@@ -246,14 +257,16 @@ nav ul li a:hover::after {
    AFRICA MAP
 ========================================================= */
 .africa-map-section {
-    padding: 80px 10%;
     text-align: center;
+    margin-top: 80px;
 }
 
 .africa-map {
     width: 100%;
-    max-width: 700px;
-    margin: 40px auto;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .country {
@@ -285,8 +298,10 @@ nav ul li a:hover::after {
 .media-slider-section {
     padding: 60px 20px;
     text-align: center;
-    background: #0d0d0d;
-    color: white;
+    background: rgba(15,15,25,0.6);
+    border-radius: 16px;
+    width: 90%;
+    margin: 60px auto;
 }
 
 .slider-container,
@@ -339,11 +354,11 @@ nav ul li a:hover::after {
    FOOTER
 ========================================================= */
 .footer {
-    background-color: #0b0d14;
+    background: rgba(10,10,20,0.85);
     padding: 60px 10% 30px;
     color: #cccccc;
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
-
 .footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -389,17 +404,19 @@ nav ul li a:hover::after {
    RESPONSIVE
 ========================================================= */
 @media (max-width: 900px) {
+    .three-columns {
+        grid-template-columns: 1fr;
+    }
 
     nav ul {
         display: none;
         flex-direction: column;
-        background-color: #0d0f16;
+        background: rgba(10,10,20,0.95);
         position: absolute;
-        top: 70px;
+        top: 80px;
         right: 0;
         width: 70%;
         padding: 20px;
-        border-left: 1px solid #262a3a;
     }
 
     nav ul.show {
@@ -408,7 +425,13 @@ nav ul li a:hover::after {
 
     .mobile-menu-icon {
         display: block;
+        font-size: 32px;
     }
+
+    .logo img {
+        height: 90px;
+    }
+}
 
     .solutions-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -445,3 +468,42 @@ nav ul li a:hover::after {
         font-size: 16px;
     }
 }
+.three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.three-columns .col {
+    background: rgba(26,29,43,0.85);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.three-columns .col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px rgba(106,0,255,0.4);
+}
+
+.three-columns h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.three-columns p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Animation décalée */
+.three-columns .col:nth-child(1) { animation-delay: 0.1s; }
+.three-columns .col:nth-child(2) { animation-delay: 0.25s; }
+.three-columns .col:nth-child(3) { animation-delay: 0.4s; }
