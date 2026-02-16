@@ -124,8 +124,8 @@ nav ul li a:hover::after {
     transform:scale(1.08); 
 }
 .main-slider video, .main-slider img { 
-    width:100%; 
-    height:100%; 
+    width:60%; 
+    height:60%; 
     object-fit:cover; 
 }
 
@@ -343,7 +343,7 @@ nav ul li a:hover::after {
 .media-item img,
 .media-item video {
     width: 100%;
-    max-width: 260px; /* Taille idéale */
+    max-width: 240px; /* Taille idéale */
     border-radius: 10px;
     box-shadow: 0 0 12px rgba(0,0,0,0.4);
     object-fit: cover;
