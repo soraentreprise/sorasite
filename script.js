@@ -63,22 +63,24 @@ var mediaSwiper = new Swiper('.media-slider', {
     slidesPerView: 5,
     spaceBetween: 15,
     loop: true,
-    centeredSlides: false,
-    freeMode: false,
+    speed: 2500, // vitesse du défilement
     autoplay: {
-        delay: 2500,
+        delay: 0, // défilement continu
         disableOnInteraction: false,
     },
+    freeMode: true,
+    freeModeMomentum: false,
+
     navigation: {
         nextEl: '.media-next',
         prevEl: '.media-prev',
     },
+
     pagination: {
         el: '.media-pagination',
         clickable: true,
     },
 });
-
 function openLightbox(img) {
     document.getElementById("lightbox-img").src = img.src;
     document.getElementById("lightbox").style.display = "flex";

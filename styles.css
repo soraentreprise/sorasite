@@ -125,8 +125,8 @@ nav ul li a:hover::after {
 }
 .main-slider video,
 .main-slider img {
-    width:80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     object-fit: cover;
 }
 
@@ -290,8 +290,7 @@ nav ul li a:hover::after {
 /* =========================================================
    MEDIA + SLIDER
 ========================================================= */
-.media-section,
-.media-slider-section {
+.media-section {
     padding: 40px 20px;
     text-align: center;
     background: rgba(15,15,25,0.6);
@@ -300,62 +299,63 @@ nav ul li a:hover::after {
     margin: 60px auto;
 }
 
-.slider-container,
-.media-slider-container {
-    width: 80%;
-    overflow: hidden;
-    margin: 30px auto;
-}
-
-.slider,
+/* Conteneur du slider */
 .media-slider {
     max-width: 900px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
+/* Taille fixe des slides */
 .media-slide {
-    width: 130px !important;   /* largeur fixe */
+    width: 130px !important;
     height: 130px !important;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transform-style: preserve-3d;
 }
 
+/* Images */
 .media-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-}
-/* SLIDER IMAGES — VERSION DYNAMIQUE PREMIUM */
-.slider img,
-.media-item img,
-.media-item video {
-    max-width: 50px;
-    height: 50px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0,0,0,0.45);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Effet hover technologique */
-.slider img:hover,
-.media-item img:hover,
-.media-item video:hover {
-    transform: scale(1.15) rotateY(8deg);
-    box-shadow: 0 0 20px rgba(106,0,255,0.6);
-}
+/* Hover 3D */
 .media-slide:hover {
     transform: scale(1.15) rotateY(12deg);
     box-shadow: 0 0 25px rgba(106,0,255,0.6);
 }
-/* Effet 3D sur les slides */
-.media-slide {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    transform-style: preserve-3d;
+
+/* Boutons Swiper */
+.media-next,
+.media-prev {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
+.media-next:hover,
+.media-prev:hover {
+    color: #a56bff;
+}
+
+/* Pagination */
+.media-pagination .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.5;
+}
+
+.media-pagination .swiper-pagination-bullet-active {
+    background: #a56bff;
+    opacity: 1;
+}
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -485,7 +485,6 @@ nav ul li a:hover::after {
         height: 85px;
     }
 }
-/* LIGHTBOX PREMIUM */
 .lightbox {
     position: fixed;
     inset: 0;
