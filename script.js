@@ -59,14 +59,32 @@ document.querySelectorAll('.country').forEach(country => {
         }
     });
 });
-let slider = document.querySelector('.slider');
-let scrollAmount = 0;
 
-setInterval(() => {
-    scrollAmount += 1;
-    slider.style.transform = `translateX(-${scrollAmount}px)`;
+var mediaSwiper = new Swiper('.media-slider', {
+    slidesPerView: 5,
+    spaceBetween: 15,
+    loop: true,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+    },
+    speed: 3500, // vitesse du défilement
+    freeMode: true,
+    freeModeMomentum: false,
+    navigation: {
+        nextEl: '.media-next',
+        prevEl: '.media-prev',
+    },
+    pagination: {
+        el: '.media-pagination',
+        clickable: true,
+    },
+});
+function openLightbox(img) {
+    document.getElementById("lightbox-img").src = img.src;
+    document.getElementById("lightbox").style.display = "flex";
+}
 
-    if (scrollAmount > slider.scrollWidth / 2) {
-        scrollAmount = 0;
-    }
-}, 30);
+document.getElementById("lightbox").onclick = function() {
+    this.style.display = "none";
+};

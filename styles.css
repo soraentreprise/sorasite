@@ -333,6 +333,16 @@ nav ul li a:hover::after {
     transform: scale(1.15) rotateY(8deg);
     box-shadow: 0 0 20px rgba(106,0,255,0.6);
 }
+/* Effet 3D sur les slides */
+.media-slide {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transform-style: preserve-3d;
+}
+
+.media-slide:hover {
+    transform: scale(1.15) rotateY(12deg);
+    box-shadow: 0 0 25px rgba(106,0,255,0.6);
+}
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -461,6 +471,30 @@ nav ul li a:hover::after {
     .logo img {
         height: 85px;
     }
+}
+/* LIGHTBOX PREMIUM */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(106,0,255,0.7);
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 /* Animation décalée */
