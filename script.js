@@ -57,20 +57,18 @@ document.querySelectorAll('.country').forEach(country => {
 
             document.getElementById("country-info").style.display = "block";
         }
-    });
 });
 
 var mediaSwiper = new Swiper('.media-slider', {
-    slidesPerView: 5,
-    spaceBetween: 15,
+    slidesPerView: 5,        // nombre de slides visibles
+    spaceBetween: 15,        // espace entre slides
     loop: true,
+    centeredSlides: false,   // IMPORTANT : empêche l’étirement
+    freeMode: false,         // évite le débordement infini
     autoplay: {
-        delay: 0,
+        delay: 2500,
         disableOnInteraction: false,
     },
-    speed: 3500, // vitesse du défilement
-    freeMode: true,
-    freeModeMomentum: false,
     navigation: {
         nextEl: '.media-next',
         prevEl: '.media-prev',
@@ -80,6 +78,7 @@ var mediaSwiper = new Swiper('.media-slider', {
         clickable: true,
     },
 });
+
 function openLightbox(img) {
     document.getElementById("lightbox-img").src = img.src;
     document.getElementById("lightbox").style.display = "flex";
