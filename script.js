@@ -63,11 +63,14 @@ var mediaSwiper = new Swiper('.media-slider', {
     slidesPerView: 5,
     spaceBetween: 15,
     loop: true,
-    speed: 2500, // vitesse du défilement
+
+    // défilement continu
+    speed: 4000,
     autoplay: {
-        delay: 0, // défilement continu
+        delay: 0,
         disableOnInteraction: false,
     },
+
     freeMode: true,
     freeModeMomentum: false,
 
@@ -81,6 +84,7 @@ var mediaSwiper = new Swiper('.media-slider', {
         clickable: true,
     },
 });
+
 function openLightbox(img) {
     document.getElementById("lightbox-img").src = img.src;
     document.getElementById("lightbox").style.display = "flex";
