@@ -234,7 +234,7 @@ nav ul li a:hover::after {
 ========================================================= */
 .products-home {
     padding: 80px 10%;
-    text-align: Justify;
+    text-align: Center;
 }
 
 .products-grid {
@@ -270,7 +270,7 @@ nav ul li a:hover::after {
    AFRICA MAP
 ========================================================= */
 .africa-map-section {
-    text-align: Justify;
+    text-align: Center;
     margin-top: 80px;
 }
 
