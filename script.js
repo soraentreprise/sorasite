@@ -59,17 +59,14 @@ document.querySelectorAll('.country').forEach(country => {
         }
     });
 });
-/* === SWIPER === */
-new Swiper('.main-slider', {
-    loop: true, autoplay: {delay: 5000}, centeredSlides: true,
-    slidesPerView: 1.2, spaceBetween: 30, grabCursor: true,
-    pagination: {el: '.swiper-pagination', clickable: true},
-    navigation: {nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'},
-    breakpoints: {768: {slidesPerView: 2}, 1024: {slidesPerView: 2.5}}
-});
-new Swiper('.media-slider', {
-    loop: true, slidesPerView: 1.5, spaceBetween: 20, centeredSlides: true,
-    pagination: {el: '.media-pagination', clickable: true},
-    navigation: {nextEl: '.media-next', prevEl: '.media-prev'},
-    breakpoints: {640: {slidesPerView: 3}, 1024: {slidesPerView: 5}}
-});
+let slider = document.querySelector('.slider');
+let scrollAmount = 0;
+
+setInterval(() => {
+    scrollAmount += 1;
+    slider.style.transform = `translateX(-${scrollAmount}px)`;
+
+    if (scrollAmount > slider.scrollWidth / 2) {
+        scrollAmount = 0;
+    }
+}, 30);
