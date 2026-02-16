@@ -124,8 +124,8 @@ nav ul li a:hover::after {
     transform:scale(1.08); 
 }
 .main-slider video, .main-slider img { 
-    width:60%; 
-    height:60%; 
+    width:90%; 
+    height:90%; 
     object-fit:cover; 
 }
 
@@ -269,8 +269,8 @@ nav ul li a:hover::after {
 }
 
 .product-card img {
-    width: 100%;
-    height: 220px;
+    width: 90%;
+    height: 210px;
     object-fit: cover;
     border-radius: 8px;
 }
