@@ -111,7 +111,7 @@ nav ul li a:hover::after {
     padding: 40px 0 60px;
 }
 .main-slider .swiper-slide {
-    max-height: 420px; /* Ajustable : 350px, 380px, 420px */
+    max-height: 350px;
 }
 .main-slider .swiper-slide-active { 
     border-color:#ff69b4; 
