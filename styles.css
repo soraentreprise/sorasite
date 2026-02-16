@@ -32,7 +32,7 @@ h1, h2, h3 {
 }
 
 p, li {
-    text-align: justify;
+    text-align: Center;
     font-size: 1.05rem;
     margin-bottom: 12px;
 }
@@ -164,7 +164,7 @@ nav ul li a:hover::after {
 /* HERO */
 .hero {
     padding: 120px 10%;
-    text-align: Justify;
+    text-align: Center;
     background: linear-gradient(to bottom right, #0d0f16, #1a1d2b);
 }
 
