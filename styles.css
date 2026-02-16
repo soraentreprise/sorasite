@@ -344,7 +344,7 @@ nav ul li a:hover::after {
 .media-item img,
 .media-item video {
     width: 100%;
-    max-width: 240px; /* Taille idéale */
+    max-width: 60px; /* Taille idéale */
     border-radius: 10px;
     box-shadow: 0 0 12px rgba(0,0,0,0.4);
     object-fit: cover;
