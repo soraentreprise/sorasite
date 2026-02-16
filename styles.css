@@ -302,7 +302,7 @@ nav ul li a:hover::after {
 
 .slider-container,
 .media-slider-container {
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     margin: 30px auto;
 }
