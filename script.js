@@ -60,11 +60,11 @@ document.querySelectorAll('.country').forEach(country => {
 });
 
 var mediaSwiper = new Swiper('.media-slider', {
-    slidesPerView: 5,        // nombre de slides visibles
-    spaceBetween: 15,        // espace entre slides
+    slidesPerView: 5,
+    spaceBetween: 15,
     loop: true,
-    centeredSlides: false,   // IMPORTANT : empêche l’étirement
-    freeMode: false,         // évite le débordement infini
+    centeredSlides: false,
+    freeMode: false,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,

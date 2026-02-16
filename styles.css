@@ -346,16 +346,16 @@ nav ul li a:hover::after {
     transform: scale(1.15) rotateY(8deg);
     box-shadow: 0 0 20px rgba(106,0,255,0.6);
 }
+.media-slide:hover {
+    transform: scale(1.15) rotateY(12deg);
+    box-shadow: 0 0 25px rgba(106,0,255,0.6);
+}
 /* Effet 3D sur les slides */
 .media-slide {
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     transform-style: preserve-3d;
 }
 
-.media-slide:hover {
-    transform: scale(1.15) rotateY(12deg);
-    box-shadow: 0 0 25px rgba(106,0,255,0.6);
-}
 /* =========================================================
    FOOTER
 ========================================================= */
