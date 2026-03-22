@@ -502,21 +502,25 @@ nav ul li a:hover::after {
 }
 .lightbox {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0,0,0,0.85);
     backdrop-filter: blur(8px);
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999999;
-    cursor: pointer;
+    z-index: 999999999; /* passe devant TOUT */
+    cursor: pointer; /* montre que c'est cliquable */
 }
 
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
     border-radius: 12px;
-    pointer-events: none;
+    animation: zoomIn 0.4s ease;
+    pointer-events: none; /* L’IMAGE NE BLOQUE PAS LE CLIC */
 }
 
 @keyframes zoomIn {
