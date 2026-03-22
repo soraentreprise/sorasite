@@ -93,6 +93,6 @@ function openLightbox(img) {
     document.getElementById("lightbox").style.display = "flex";
 }
 
-document.getElementById("lightbox").onclick = function () {
+document.getElementById("lightbox").onclick = function() {
     this.style.display = "none";
 };
