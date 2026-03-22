@@ -23,12 +23,12 @@ const presence = {
     "GH": {
         name: "Ghana",
         products: ["PX1", "PXT"],
-        details: "Démonstration à L'Etat Major des Armeés et au National Control Commission."
+        details: "Démonstration à l'État-Major des Armées et au National Control Commission."
     },
     "GMB": {
         name: "Gambie",
         products: ["PX1", "PXT"],
-        details: "Démonstration au GRA ."
+        details: "Démonstration au GRA."
     },
     "ML": {
         name: "Mali",
@@ -40,51 +40,54 @@ const presence = {
         products: ["PX1", "PXT"],
         details: "Démonstration au Quartier général de la Défense."
     }
-
 };
 
 /* Interaction avec la carte */
 document.querySelectorAll('.country').forEach(country => {
     country.addEventListener('click', () => {
         const id = country.id;
-        alert("Pays sélectionné : " + id);
-   
-        if (info) {
-            document.getElementById("country-name").innerText = info.name;
-            document.getElementById("country-details").innerText =
-                "Produits utilisés : " + info.products.join(", ") +
-                ". " + info.details;
+        const info = presence[id];
 
-            document.getElementById("country-info").style.display = "block";
+        if (!info) {
+            alert("Pays sélectionné : " + id);
+            return;
         }
+
+        document.getElementById("country-name").innerText = info.name;
+        document.getElementById("country-details").innerText =
+            "Produits utilisés : " + info.products.join(", ") + ". " + info.details;
+
+        document.getElementById("country-info").style.display = "block";
+    });
 });
 
+/* ------------------------------
+   SLIDER MÉDIAS (SWIPER)
+------------------------------ */
 var mediaSwiper = new Swiper('.media-slider', {
     slidesPerView: 5,
     spaceBetween: 15,
     loop: true,
-
-    // défilement continu
     speed: 4000,
     autoplay: {
         delay: 0,
         disableOnInteraction: false,
     },
-
     freeMode: true,
     freeModeMomentum: false,
-
     navigation: {
         nextEl: '.media-next',
         prevEl: '.media-prev',
     },
-
     pagination: {
         el: '.media-pagination',
         clickable: true,
     },
 });
 
+/* ------------------------------
+   LIGHTBOX
+------------------------------ */
 function openLightbox(img) {
     document.getElementById("lightbox-img").src = img.src;
     document.getElementById("lightbox").style.display = "flex";

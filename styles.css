@@ -32,7 +32,7 @@ h1, h2, h3 {
 }
 
 p, li {
-    text-align: justify;
+    text-align: Center;
     font-size: 1.05rem;
     margin-bottom: 12px;
 }
@@ -58,7 +58,7 @@ header {
 
 /* LOGO AGRANDI */
 .logo img {
-    height: 110px;
+    height: 120px;
     filter: drop-shadow(0 0 12px rgba(106,0,255,0.6));
     transition: 0.3s ease;
 }
@@ -161,44 +161,59 @@ nav ul li a:hover::after {
     color: white;
 }
 
+/* HERO */
 .hero {
-    padding: 150px 20px;
-    text-align: center;
-    background: rgba(20,20,35,0.6);
-    border-radius: 16px;
-    margin: 60px auto;
-    width: 90%;
-    position: relative;
-    overflow: hidden;
-    animation: fadeUp 1s ease forwards;
-    opacity: 0;
+    padding: 120px 10%;
+    text-align: Center;
+    background: linear-gradient(to bottom right, #0d0f16, #1a1d2b);
 }
 
-/* Effet futuriste */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(106,0,255,0.25), transparent 60%),
-                radial-gradient(circle at 70% 80%, rgba(0,180,255,0.25), transparent 60%);
-    pointer-events: none;
-}
-
-.hero h1, .hero p {
-    text-shadow: 0 0 12px rgba(0,0,0,0.6);
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    max-width: 750px;
-    margin: 0 auto;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: Center;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #6a5acd;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #6a5acd;
+    color: #6a5acd;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.8;
 }
 /* =========================================================
    SOLUTIONS
 ========================================================= */
 .solutions-home {
     padding: 80px 10%;
-    text-align: Align Left;
+    text-align: Center;
 }
 
 .solutions-grid {
@@ -219,7 +234,7 @@ nav ul li a:hover::after {
 ========================================================= */
 .products-home {
     padding: 80px 10%;
-    text-align: Justify;
+    text-align: Center;
 }
 
 .products-grid {
@@ -487,21 +502,25 @@ nav ul li a:hover::after {
 }
 .lightbox {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0,0,0,0.85);
     backdrop-filter: blur(8px);
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 999999999; /* passe devant TOUT */
+    cursor: pointer; /* montre que c'est cliquable */
 }
 
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
     border-radius: 12px;
-    box-shadow: 0 0 25px rgba(106,0,255,0.7);
     animation: zoomIn 0.4s ease;
+    pointer-events: none; /* L’IMAGE NE BLOQUE PAS LE CLIC */
 }
 
 @keyframes zoomIn {
@@ -509,7 +528,67 @@ nav ul li a:hover::after {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Animation décalée */
-.three-columns .col:nth-child(1) { animation-delay: 0.1s; }
-.three-columns .col:nth-child(2) { animation-delay: 0.25s; }
-.three-columns .col:nth-child(3) { animation-delay: 0.4s; }
+.fiches-techniques-section {
+    width: 90%;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(15,15,25,0.6);
+    border-radius: 16px;
+    color: white;
+    text-align: center;
+}
+
+.fiche-intro {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.fiche-block {
+    margin-bottom: 80px;
+}
+
+.fiche-block h2 {
+    color: #a56bff;
+    margin-bottom: 10px;
+}
+
+.fiche-description {
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+.pdf-viewer-container {
+    width: 100%;
+    height: 800px;
+    margin: 30px auto;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.fiche-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 26px;
+    background: linear-gradient(135deg, #6a00ff, #3b0b99);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(106,0,255,0.4);
+}
+
+.fiche-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 25px rgba(106,0,255,0.7);
+}
